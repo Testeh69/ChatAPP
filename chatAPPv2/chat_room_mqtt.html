@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="icon" href="logo2.ico" type="image/x-icon">
+<meta name="viemport" content="width=device-width, initial-scale=1.0">
+<link href="chat_room.css" rel="stylesheet"/>
+
+<title>sm'HEI's</title>
+</head>
+<body>
+<main>
+    <aside class="left rubis">
+        <h1 >RUBIS</h1>
+        <p><a href="main.html">Menu</a></p>
+    </aside>  
+<aside class="middle">
+<div class="box mail">
+    <div id="messages"></div>
+</div>      
+<div class="msg">
+    <!--text-->
+    <input type="text" value="send a message" class="text" id ="message-input">
+    <!--image-->
+    <input type="file" class="file-input" id="file-input" accept="image/*">
+    <!--label link the input file to the ion icon file-->
+    <label for="file-input" class="image-icon">
+    <span class="image"><ion-icon name="image-outline"></ion-icon></span>
+    </label>
+    <!--send-->
+    <span class="send" id="send-button"><ion-icon name="send-outline"></ion-icon></span>
+</div>
+</aside>
+</main>
+<!--Script JS -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="clientMQTT.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<!--Fin script js-->
+</body>
+</html>

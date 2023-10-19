@@ -1,0 +1,233 @@
+/*variable couleur*/
+
+:root{
+    --main-white:#fff;
+    --main-purple:#4d5bf9;
+    --main-black:#333;
+    --main-gray: #303841; /*for message*/
+}
+
+
+
+
+/*Body*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+a {
+    text-decoration: none; /* Remove underline */
+    display: none; /* Use the parent element's color (default or specified) */
+}
+
+.login a h3{
+    color:var(--main-purple);
+}
+
+body{
+    overflow-x: hidden;
+    min-height: 100vh;
+    background-color: #000;
+    background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+}
+
+
+main{
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+  
+
+/*aside*/
+
+
+.left {
+    height: 100%; /* Adjust the height as needed */
+    width:23%;
+    position: fixed;
+    color:white;
+    justify-content: center;
+    text-align: center;
+    font-size: 38px;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+ /* Add this if you want it to be fixed */
+}
+
+.rubis{
+    background-color: #FFE53B;
+    background-image: linear-gradient(147deg, #FFE53B 0%, #FF2525 74%);
+    
+}
+
+.left h1{
+    margin-top: 100%;
+}
+
+.left p{
+    background-color: ;
+    margin-top: 80%;
+}
+
+/*middle part chat room rules*/
+.middle{
+    margin-left: 25%;
+    width:75%;
+    height:100%;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+/* ELEMENT QUI AFFICHE LES MESSAGES ENVOYER OU RECUES*/
+.box{
+    width:100%;
+    height:90%;
+    color:rgb(235, 228, 228);
+    overflow-y: auto;
+   }
+
+/*receive message*/
+
+.message-received {
+    margin-top: 3vh;
+    margin-right: 2vh;
+    width:20%;
+    text-align: left;
+    color: #fff; /* Couleur de texte pour les messages reçus */
+    background-color: var(--main-purple);
+    border:solid var(--main-black);
+    border-radius: 10px;
+    max-height: 500px;
+    word-wrap: break-word;
+}
+
+/*send message*/
+
+.message-sent {
+    position: relative;
+    left:70%;
+    width: 20%;
+    margin-top: 3vh;
+    color: white;
+    background-color: var(--main-purple);
+    border: solid var(--main-black);
+    border-radius: 10px;
+    padding: 10px; 
+    text-align: left;
+    max-height: 500px;
+    word-wrap: break-word;/*ADAPTE L'ENFANT EN FONCTION DU CONTENEUR*/
+}
+
+
+
+.message-sent span{
+    margin-bottom: 5vh;
+    color:red;
+}
+
+
+/*INPUT ELEMENTS*/
+
+
+/*INPUT ELEMENTS PARENTS*/
+.msg{
+    width: 100%;
+    height:10%;
+    display: inline-flex;
+    flex-direction: row;
+}
+
+
+
+.file-input{
+    display: none;
+}
+
+
+/*
+Cursor pointer show when the mouse is over an element
+*/
+.image-icon{
+    cursor: pointer;
+}
+
+
+input[type="text"]{
+    margin:0;
+    border-radius: 5px;
+    height:2em;
+    width:80%;
+}
+
+.image ion-icon, .send ion-icon{
+    margin: 0;
+    padding: 0;
+    font-size: 2em;
+    cursor: pointer;
+    color: var(--main-purple);
+}
+
+.image ion-icon:hover, .send ion-icon:hover{
+    margin: 0;;
+    font-size: 2em;
+    transform:rotate(-30deg);
+    color:var(--main-white);
+    transition:color 1s ;
+    transition: transform 1s ease;
+}
+
+/*right part chat room rules*/
+
+
+.right{
+    margin-left: 85%;
+    width:15%;
+    position: fixed;
+    height: 100%;
+}
+
+/*responsive web design*/
+
+@media(max-width:768px){
+    .image ion-icon, .send ion-icon{
+        margin-left: 5px;
+        margin-top:18%;
+        font-size: 2em;
+    }
+}
+@media(max-height:768px){
+
+    .image ion-icon, .send ion-icon{
+        margin-left: 5px;
+        margin-top:-30%;
+        font-size: 2em;
+    }
+    .image ion-icon:hover, .send ion-icon:hover{
+        margin-left: 5px;
+        margin-top:-30%;
+        font-size: 2em;
+    }
+    h1{
+        z-index: 0;
+        color:none;
+    }
+    input[type="text"]{
+        margin-top:-3%;
+        border-radius: 5px;
+        height:2em;
+        width:80%;
+    }
+}
+
+/*TASK TO DO
+#########################
+Filtrer et prufier le css
+*/
